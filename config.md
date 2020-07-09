@@ -1,3 +1,5 @@
+![](img/neovim-logo-shadow.png)  
+
 1. 参考[官方文档](https://github.com/neovim/neovim/wiki/Installing-Neovim)安装neovim  
 2. 参考 [vim-plug](https://github.com/junegunn/vim-plug) 官方文档 
 3. 下载`vim-plug`到指定目录
