@@ -1,38 +1,41 @@
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Make sure you use single quotes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'sheerun/vim-polyglot'
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 
-
-" Initialize plugin system
 call plug#end()
 
-"Airline config
-"Enable Tab
+
+set encoding=utf-8
+
+"Color Theme
+"let g:gruvbox_contrast_dark='soft'
+"set background=dark    " Setting dark mode
+"colorscheme gruvbox
+colorscheme onedark
+
+
+"Airline theme
+let g:airline_theme='light'
+let g:airline_theme='onedark'
+
 "let g:airline#extensions#tabline#enabled = 1
 
-"Integrating with powerline fonts
+"Airline use powerfont
 let g:airline_powerline_fonts = 1
 
 
-"One Dark theme
-syntax on
-colorscheme onedark
-let g:airline_theme='onedark'
+"eliminate delay
+set timeoutlen=1000 ttimeoutlen=10
+
+"line number
+:set number
 
 
-
-"line num
-set nu
-
-"indent
-:set tabstop=4
-
-
+"use 256 color in terminal
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -48,3 +51,7 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+
+let g:python3_host_prog = '/usr/local/bin/python3'
+
